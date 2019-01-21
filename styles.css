@@ -57,17 +57,11 @@ html, body {
   font-size: 10px;
   font-family: 'Quicksand', sans-serif;
   background: url(images/pastel-mountain-range.jpg) no-repeat center center fixed;
+  overflow: hidden;
 -webkit-background-size: cover;
 -moz-background-size: cover;
 -o-background-size: cover;
 background-size: cover;
-}
-
-.wrapper {
-  /* display: grid;
-  grid-template-columns: 1fr 1fr;
-  padding: 0 60px;
-  max-height: 100vh; */
 }
 
 h1.wordmark {
@@ -106,38 +100,35 @@ h4 {
   text-align: center;
 }
 
-.static {
-  /* background: cadetblue; */
-  position: fixed;
-  width: 40%;
+.wrapper {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-gap: 20px;
+  padding: 0 60px;
   height: 100vh;
-  display: flex;
-  flex-direction: column;
-  /* justify-content: center; */
+  /* align-items: center; */
 }
 
-.hero {
-  height: 100vh;
+.wrapper > * {
   display: flex;
   flex-direction: column;
-  justify-content: center;
+  height: 100vh;
+}
 
+.static {
+  background: cadetblue;
+
+}
+
+
+.scrolling {
+  overflow-y: auto;
+  background: mistyrose;
 }
 
 .hero-text {
-  height: 400px;
-  display: flex;
-  flex-direction: column;
-  justify-content: flex-end;
-}
-
-.scrolling {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  /* background: tomato; */
-  width: 45%;
-  float: right;
+  height: 100vh;
+  background: tomato;
 }
 
 .feature {
