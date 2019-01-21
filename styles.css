@@ -49,22 +49,132 @@ table {
 
 /* End Reset */
 
+:root {
+  --color-type: #F9F9FB;
+}
+
 html, body {
   font-size: 10px;
   font-family: 'Quicksand', sans-serif;
+  background: url(images/pastel-mountain-range.jpg) no-repeat center center fixed;
+-webkit-background-size: cover;
+-moz-background-size: cover;
+-o-background-size: cover;
+background-size: cover;
+}
+
+.wrapper {
+  /* display: grid;
+  grid-template-columns: 1fr 1fr;
+  padding: 0 60px;
+  max-height: 100vh; */
 }
 
 h1.wordmark {
   font-family: 'Comfortaa', cursive;
-  font-size: 95px;
+  font-size: 80px;
+}
+
+h1 {
+  font-size: 6.3rem;
+  color: var(--color-type);
+  font-weight: 300;
+  letter-spacing: -0.03em;
+}
+
+h2 {
+  font-size: 3.2rem;
+  color: var(--color-type);
+  font-weight: 300;
+  line-height: 40px;
+  text-align: left;
+}
+
+h3 {
+  font-size: 3.2rem;
+  color: var(--color-type);
+  font-weight: 300;
+  line-height: 48px;
+  text-align: center;
+}
+
+h4 {
+  font-size: 1.8rem;
+  color: var(--color-type);
+  font-weight: 400;
+  line-height: 24px;
+  text-align: center;
 }
 
 .static {
-  background: cadetblue;
+  /* background: cadetblue; */
+  position: fixed;
+  width: 40%;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  /* justify-content: center; */
+}
+
+.hero {
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+
+}
+
+.hero-text {
+  height: 400px;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
 }
 
 .scrolling {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  /* background: tomato; */
+  width: 45%;
   float: right;
-  background: tomato;
-  width: 50%;
+}
+
+.feature {
+  padding: 100px 20px;
+}
+
+.feature-graphic {
+  background: AntiqueWhite;
+  height: 300px;
+  margin: 0 auto;
+  width: 200px;
+}
+
+button {
+  border: var(--color-type) solid 1px;
+  background: transparent;
+  display: inline-block;
+  text-align: center;
+  text-transform: uppercase;
+  padding: 1rem 1.6rem 1rem 1.6rem;
+
+}
+
+button span {
+  color: var(--color-type);
+  text-transform: lowercase;
+  font-size: 2.5rem;
+  letter-spacing: .1em;
+  font-family: 'Quicksand', sans-serif;
+}
+
+.btn-wrapper {
+  align-self: flex-end;
+}
+
+.btn-label {
+  display: flex;
+  align-items: flex-start;
+  justify-content: center;
 }
