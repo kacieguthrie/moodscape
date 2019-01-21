@@ -112,27 +112,33 @@ h4 {
 .wrapper > * {
   display: flex;
   flex-direction: column;
-  height: 100vh;
 }
-
-.static {
-  background: cadetblue;
-
-}
-
 
 .scrolling {
   overflow-y: auto;
-  background: mistyrose;
+  scroll-behavior: smooth;
+}
+
+.hero {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  min-height: 100vh;
+
 }
 
 .hero-text {
-  height: 100vh;
-  background: tomato;
+  height: 50vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
 }
+
 
 .feature {
   padding: 100px 20px;
+  border: solid 1px black;
+
 }
 
 .feature-graphic {
@@ -143,20 +149,24 @@ h4 {
 }
 
 button {
-  border: var(--color-type) solid 1px;
+  border: none;
   background: transparent;
   display: inline-block;
   text-align: center;
   text-transform: uppercase;
-  padding: 1rem 1.6rem 1rem 1.6rem;
+  padding: 1rem 2.4rem;
+}
 
+button.cta {
+  border: var(--color-type) solid 1px;
+  border-radius: 4px;
 }
 
 button span {
   color: var(--color-type);
   text-transform: lowercase;
   font-size: 2.5rem;
-  letter-spacing: .1em;
+  letter-spacing: .2em;
   font-family: 'Quicksand', sans-serif;
 }
 
