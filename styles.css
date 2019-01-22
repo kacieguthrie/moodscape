@@ -56,13 +56,14 @@ table {
 html, body {
   font-size: 10px;
   font-family: 'Quicksand', sans-serif;
-  background: url(images/pastel-mountain-range.jpg) no-repeat center center fixed;
-  overflow: hidden;
+  background: linear-gradient(230deg, rgb(108,99,255, .4), rgb(108,99,255,.2), transparent), url("images/pastel-mountain-range.jpg") no-repeat center;
 -webkit-background-size: cover;
 -moz-background-size: cover;
 -o-background-size: cover;
 background-size: cover;
 }
+
+
 
 h1.wordmark {
   font-family: 'Comfortaa', cursive;
@@ -106,8 +107,31 @@ h4 {
   grid-gap: 20px;
   padding: 0 60px;
   height: 100vh;
+
   /* align-items: center; */
 }
+
+/* .bg-img {
+  background: linear-gradient(#004092, #020202, transparent), url("images/pastel-mountain-range.jpg") no-repeat center;
+  background: url(images/pastel-mountain-range.jpg) no-repeat center center fixed;
+  overflow: hidden;
+-webkit-background-size: cover;
+-moz-background-size: cover;
+-o-background-size: cover;
+background-size: cover;
+} */
+
+/* .bg-img:before {
+    content: '';
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  background-image: linear-gradient(to bottom right,#002f4b,#dc4225);
+  opacity: .6;
+
+  } */
 
 .wrapper > * {
   display: flex;
@@ -124,28 +148,37 @@ h4 {
   flex-direction: column;
   justify-content: center;
   min-height: 100vh;
-
 }
 
 .hero-text {
-  height: 50vh;
+  height: 80vh;
   display: flex;
   flex-direction: column;
   justify-content: flex-end;
 }
 
+.hero-text h2{
+  margin-bottom: calc(12vh + 40px);
+}
+
+.hero-text .top {
+  margin-bottom: 12vh;
+  max-width: 600px;
+}
 
 .feature {
-  padding: 100px 20px;
-  border: solid 1px black;
+  padding: 15vh 20px;
+  width: 80%;
+  /* border: solid 1px black; */
 
 }
 
 .feature-graphic {
-  background: AntiqueWhite;
-  height: 300px;
-  margin: 0 auto;
-  width: 200px;
+  /* background: AntiqueWhite; */
+  height: auto;
+  width: 100%;
+  text-align: center;
+  padding: 3rem 0 4rem 0
 }
 
 button {
@@ -178,4 +211,9 @@ button span {
   display: flex;
   align-items: flex-start;
   justify-content: center;
+  padding-bottom: 1rem;
+}
+
+.logo {
+
 }
