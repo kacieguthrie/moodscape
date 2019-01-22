@@ -56,10 +56,9 @@ table {
 html, body {
   font-size: 10px;
   font-family: 'Quicksand', sans-serif;
+  background: -webkit-linear-gradient(220deg, rgb(108,99,255, .4), rgb(108,99,255,.2), transparent), url("images/pastel-mountain-range.jpg") no-repeat center;
+  background: -o-linear-gradient(220deg, rgb(108,99,255, .4), rgb(108,99,255,.2), transparent), url("images/pastel-mountain-range.jpg") no-repeat center;
   background: linear-gradient(230deg, rgb(108,99,255, .4), rgb(108,99,255,.2), transparent), url("images/pastel-mountain-range.jpg") no-repeat center;
--webkit-background-size: cover;
--moz-background-size: cover;
--o-background-size: cover;
 background-size: cover;
 }
 
@@ -100,7 +99,9 @@ h4 {
 }
 
 .wrapper {
+  display: -ms-grid;
   display: grid;
+  -ms-grid-columns: 1fr 20px 1fr;
   grid-template-columns: 1fr 1fr;
   grid-gap: 20px;
   padding: 0 60px;
@@ -108,8 +109,13 @@ h4 {
 }
 
 .wrapper > * {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  flex-direction: column;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
 }
 
 .scrolling {
@@ -118,17 +124,31 @@ h4 {
 }
 
 .hero {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  flex-direction: column;
-  justify-content: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
   min-height: 100vh;
 }
 
 .hero-text {
   height: 80vh;
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  flex-direction: column;
-  justify-content: flex-end;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: end;
+      -ms-flex-pack: end;
+          justify-content: flex-end;
 }
 
 .hero-text h2{
@@ -175,12 +195,19 @@ button span {
 }
 
 .btn-wrapper {
-  align-self: flex-end;
+  -ms-flex-item-align: end;
+      align-self: flex-end;
 }
 
 .btn-label {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  align-items: flex-start;
-  justify-content: center;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
   padding-bottom: 1rem;
 }
