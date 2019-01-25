@@ -1,3 +1,4 @@
+
 /* http://meyerweb.com/eric/tools/css/reset/
    v2.0 | 20110126
    License: none (public domain)
@@ -59,7 +60,11 @@ html, body {
   background: -webkit-linear-gradient(220deg, rgb(108,99,255, .4), rgb(108,99,255,.2), transparent), url("images/pastel-mountain-range.jpg") no-repeat center;
   background: -o-linear-gradient(220deg, rgb(108,99,255, .4), rgb(108,99,255,.2), transparent), url("images/pastel-mountain-range.jpg") no-repeat center;
   background: linear-gradient(230deg, rgb(108,99,255, .4), rgb(108,99,255,.2), transparent), url("images/pastel-mountain-range.jpg") no-repeat center;
-  background-size: cover;
+background-size: cover;
+}
+
+.mobile {
+	display: none;
 }
 
 h1.wordmark {
@@ -116,16 +121,6 @@ h4 {
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
-}
-
-/* Tablet */
-@media only screen and (min-width: 480px) and (max-width: 900px) {
-  .wrapper {
-    display: inline-block;
-  }
-  .static {
-    height: 90vh;
-  }
 }
 
 .scrolling {
@@ -220,4 +215,36 @@ button span {
       -ms-flex-pack: center;
           justify-content: center;
   padding-bottom: 1rem;
+}
+
+
+/* Tablet */
+@media only screen and (min-width: 480px) and (max-width: 950px) {
+	.wrapper {
+		background-color: pink;
+		grid-template-columns: 100vw;
+		/* grid-template-rows: 80vh 20vh; */
+		padding: 0 40px 0 20px;
+	}
+
+	.mobile {
+		display: inline-block;
+	}
+
+	.desktop {
+		display: none;
+	}
+
+	.scrolling {
+		overflow-y: visible;
+	}
+
+}
+
+
+/* Phone */
+@media only screen and (max-width: 480px) {
+	.wrapper {
+		background-color: cadetblue;
+	}
 }
