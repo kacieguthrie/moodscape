@@ -223,8 +223,13 @@ button span {
 /* Tablet */
 @media only screen and (min-width: 480px) and (max-width: 950px) {
 	.wrapper {
+		display: -webkit-box;
+		display: -ms-flexbox;
 		display: flex;
-		flex-direction: column;
+		-webkit-box-orient: vertical;
+		-webkit-box-direction: normal;
+		    -ms-flex-direction: column;
+		        flex-direction: column;
 		grid-gap: 10px;
 	}
 
@@ -237,12 +242,16 @@ button span {
 	}
 
 	.static .hero {
-		justify-content: flex-end;
+		-webkit-box-pack: end;
+		    -ms-flex-pack: end;
+		        justify-content: flex-end;
 		min-height: 80vh;
 	}
 
 	.static .hero-text {
-		justify-content: flex-end;
+		-webkit-box-pack: end;
+		    -ms-flex-pack: end;
+		        justify-content: flex-end;
 		height: auto;
 	}
 
@@ -257,18 +266,26 @@ button span {
 	}
 
 	.scrolling .hero-text {
-		align-items: flex-end;
-		justify-content: flex-start;
+		-webkit-box-align: end;
+		    -ms-flex-align: end;
+		        align-items: flex-end;
+		-webkit-box-pack: start;
+		    -ms-flex-pack: start;
+		        justify-content: flex-start;
 		height: auto;
 	}
 
 	.scrolling .hero {
-		justify-content: flex-start;
+		-webkit-box-pack: start;
+		    -ms-flex-pack: start;
+		        justify-content: flex-start;
 		min-height: auto;
 	}
 
 	.feature {
-		align-self: center;
+		-ms-flex-item-align: center;
+		    -ms-grid-row-align: center;
+		    align-self: center;
 		padding: 10vh 0;
 	}
 
@@ -291,8 +308,13 @@ button span {
 /* Phone */
 @media only screen and (max-width: 480px) {
 	.wrapper {
+		display: -webkit-box;
+		display: -ms-flexbox;
 		display: flex;
-		flex-direction: column;
+		-webkit-box-orient: vertical;
+		-webkit-box-direction: normal;
+		    -ms-flex-direction: column;
+		        flex-direction: column;
 		grid-gap: 10px;
 		padding: 20px 16px;
 	}
@@ -306,12 +328,16 @@ button span {
 	}
 
 	.static .hero {
-		justify-content: flex-end;
+		-webkit-box-pack: end;
+		    -ms-flex-pack: end;
+		        justify-content: flex-end;
 		min-height: 80vh;
 	}
 
 	.static .hero-text {
-		justify-content: flex-end;
+		-webkit-box-pack: end;
+		    -ms-flex-pack: end;
+		        justify-content: flex-end;
 		height: auto;
 	}
 
@@ -325,18 +351,26 @@ button span {
 	}
 
 	.scrolling .hero-text {
-		align-items: flex-end;
-		justify-content: flex-start;
+		-webkit-box-align: end;
+		    -ms-flex-align: end;
+		        align-items: flex-end;
+		-webkit-box-pack: start;
+		    -ms-flex-pack: start;
+		        justify-content: flex-start;
 		height: auto;
 	}
 
 	.scrolling .hero {
-		justify-content: flex-start;
+		-webkit-box-pack: start;
+		    -ms-flex-pack: start;
+		        justify-content: flex-start;
 		min-height: auto;
 	}
 
 	.feature {
-		align-self: center;
+		-ms-flex-item-align: center;
+		    -ms-grid-row-align: center;
+		    align-self: center;
 		padding: 10vh 0;
 	}
 
