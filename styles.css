@@ -60,6 +60,8 @@ html, body {
   background: -webkit-linear-gradient(220deg, rgb(108,99,255, .4), rgb(108,99,255,.2), transparent), url("images/pastel-mountain-range.jpg") no-repeat center;
   background: -o-linear-gradient(220deg, rgb(108,99,255, .4), rgb(108,99,255,.2), transparent), url("images/pastel-mountain-range.jpg") no-repeat center;
   background: linear-gradient(230deg, rgb(108,99,255, .4), rgb(108,99,255,.2), transparent), url("images/pastel-mountain-range.jpg") no-repeat center;
+	background: url("images/pastel-mountain-range.jpg") no-repeat center;
+	background-attachment: fixed;
 background-size: cover;
 }
 
@@ -76,7 +78,7 @@ h1 {
   font-size: 6.3rem;
   color: var(--color-type);
   font-weight: 300;
-  letter-spacing: -0.03em;
+  letter-spacing: -0.01em;
 }
 
 h2 {
@@ -221,10 +223,9 @@ button span {
 /* Tablet */
 @media only screen and (min-width: 480px) and (max-width: 950px) {
 	.wrapper {
-		background-color: pink;
-		grid-template-columns: 100vw;
-		/* grid-template-rows: 80vh 20vh; */
-		padding: 0 40px 0 20px;
+		/* background-color: pink; */
+		display: flex;
+		flex-direction: column;
 	}
 
 	.mobile {
@@ -235,8 +236,43 @@ button span {
 		display: none;
 	}
 
+	.static .hero {
+		background-color: red;
+	}
+
+	.static .hero {
+		justify-content: flex-end;
+		height: 80vh;
+	}
+
+/* How do I get the static hero to take up only 80vh? */
+
 	.scrolling {
 		overflow-y: visible;
+		border: solid blue 2px;
+	}
+
+	.scrolling .hero-text {
+		align-items: flex-end;
+		justify-content: flex-start;
+	}
+
+	.scrolling .hero {
+		justify-content: flex-start;
+	}
+
+
+
+	h1.wordmark {
+		font-size: 6rem;
+	}
+
+	h2 {
+		font-size: 2.8rem;
+	}
+
+	h1 {
+		font-size: 5rem;
 	}
 
 }
