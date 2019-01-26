@@ -236,31 +236,45 @@ button span {
 		display: none;
 	}
 
-	.static .hero {
-		background-color: red;
+	.wrapper {
+		grid-gap: 10px;
 	}
 
 	.static .hero {
 		justify-content: flex-end;
-		height: 80vh;
+		min-height: 80vh;
 	}
 
-/* How do I get the static hero to take up only 80vh? */
+	.static .hero-text {
+		justify-content: flex-end;
+		height: auto;
+	}
+
+	.hero-text h2, .hero-text h1.top{
+		margin-bottom: 6vh;
+	}
+
 
 	.scrolling {
 		overflow-y: visible;
-		border: solid blue 2px;
+		scroll-behavior: smooth;
 	}
 
 	.scrolling .hero-text {
 		align-items: flex-end;
 		justify-content: flex-start;
+		height: auto;
 	}
 
 	.scrolling .hero {
 		justify-content: flex-start;
+		min-height: auto;
 	}
 
+	.feature {
+		align-self: center;
+		padding: 10vh 0;
+	}
 
 
 	h1.wordmark {
