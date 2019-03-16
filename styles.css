@@ -57,10 +57,10 @@ table {
 html, body {
   font-size: 10px;
   font-family: 'Quicksand', sans-serif;
-	background: url("images/hero-bkg-safari.jpg") no-repeat center;
-	background: -webkit-linear-gradient(220deg, rgba(108,99,255, .4), rgba(108,99,255,.2), transparent), url("images/pastel-mountain-range.jpg") no-repeat center;
+	background: url("images/hero-bkg-safari.png") no-repeat center;
+	/* background: -webkit-linear-gradient(220deg, rgba(108,99,255, .4), rgba(108,99,255,.2), transparent), url("images/pastel-mountain-range.jpg") no-repeat center;
   background: -o-linear-gradient(220deg, rgba(108,99,255, .4), rgba(108,99,255,.2), transparent), url("images/pastel-mountain-range.jpg") no-repeat center;
-  background: linear-gradient(230deg, rgba(108,99,255, .4), rgba(108,99,255,.2), transparent), url("images/pastel-mountain-range.jpg") no-repeat center;
+  background: linear-gradient(230deg, rgba(108,99,255, .4), rgba(108,99,255,.2), transparent), url("images/pastel-mountain-range.jpg") no-repeat center; */
 	background-attachment: fixed;
 	background-size: cover;
 }
@@ -126,7 +126,7 @@ p {
   -ms-grid-columns: 1fr 20px 1fr;
   grid-template-columns: 1fr 1fr;
   grid-gap: 20px;
-  padding: 0 60px;
+
   height: 100vh;
 }
 
@@ -143,6 +143,10 @@ p {
 .scrolling {
   overflow-y: auto;
   scroll-behavior: smooth;
+}
+
+.static {
+	margin: 0 30px 0 60px;
 }
 
 .hero {
@@ -168,13 +172,11 @@ p {
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
-  -webkit-box-pack: end;
-      -ms-flex-pack: end;
-          justify-content: flex-end;
+  justify-content: flex-end;
 }
 
 .hero-text h2{
-  margin-bottom: calc(12vh + 40px);
+  margin-bottom: calc(12vh + 72px);
 }
 
 .hero-text .top {
@@ -183,15 +185,14 @@ p {
 }
 
 .feature {
-  padding: 15vh 20px;
-  width: 80%;
+  padding: 15vh 0;
 }
 
 .feature-graphic {
   height: auto;
   width: 100%;
   text-align: center;
-  padding: 3rem 0 4rem 0
+  padding: 3rem 0 4rem 0;
 }
 
 button {
@@ -200,7 +201,7 @@ button {
   display: inline-block;
   text-align: center;
   text-transform: uppercase;
-  padding: 1rem 2.4rem;
+  padding: 2rem 1rem 0 0;
 }
 
 button.cta {
@@ -209,7 +210,7 @@ button.cta {
 }
 
 .btn-wrapper.mobile {
-	width: auto;
+
 	margin: 0 auto;
 	padding-bottom: 40px;
 }
@@ -220,11 +221,6 @@ button span {
   font-size: 2.5rem;
   letter-spacing: .2em;
   font-family: 'Quicksand', sans-serif;
-}
-
-.btn-wrapper {
-  -ms-flex-item-align: end;
-      align-self: flex-end;
 }
 
 .btn-label {
@@ -262,6 +258,10 @@ button span {
 		display: none;
 	}
 
+	.static {
+		margin: 0 60px;
+	}
+
 	.static .hero {
 		-webkit-box-pack: end;
 		    -ms-flex-pack: end;
@@ -284,16 +284,21 @@ button span {
 	.scrolling {
 		overflow-y: visible;
 		scroll-behavior: smooth;
+		margin: 0 60px;
 	}
 
 	.scrolling .hero-text {
-		-webkit-box-align: end;
-		    -ms-flex-align: end;
-		        align-items: flex-end;
 		-webkit-box-pack: start;
 		    -ms-flex-pack: start;
 		        justify-content: flex-start;
 		height: auto;
+	}
+
+	.feature-graphic {
+	  height: auto;
+	  width: 100%;
+	  margin: 0 auto;
+	  padding: 3rem 0 4rem 0
 	}
 
 	.scrolling .hero {
@@ -315,7 +320,7 @@ button span {
 	}
 
 	h1.wordmark {
-		font-size: 6rem;
+		font-size: 5rem;
 	}
 
 	h2 {
@@ -323,7 +328,7 @@ button span {
 	}
 
 	h1 {
-		font-size: 5rem;
+		font-size: 4rem;
 	}
 
 }
@@ -374,10 +379,23 @@ button span {
 		overflow-y: visible;
 	}
 
+	.feature-graphic {
+	  height: auto;
+	  width: 80%;
+	  margin: 0 auto;
+	  padding: 3rem 0 4rem 0
+	}
+
+	.static {
+		margin: 0 20px;
+	}
+
+	button span {
+		font-size: 1.8rem;
+
+	}
+
 	.scrolling .hero-text {
-		-webkit-box-align: end;
-		    -ms-flex-align: end;
-		        align-items: flex-end;
 		-webkit-box-pack: start;
 		    -ms-flex-pack: start;
 		        justify-content: flex-start;
@@ -414,6 +432,6 @@ button span {
 	}
 
 	h1 {
-		font-size: 3.6rem;
+		font-size: 3.2rem;
 	}
 }
