@@ -61,6 +61,7 @@ html, body {
   font-size: 10px;
   font-family: 'Quicksand', sans-serif;
 	background-color: var(--color-dark);
+	scroll-behavior: smooth;
 }
 
 
@@ -93,7 +94,7 @@ h2 {
 }
 
 h3 {
-  font-size: 3.2rem;
+  font-size: 3rem;
   color: var(--color-type);
   font-weight: 300;
   line-height: 48px;
@@ -116,6 +117,10 @@ p {
 	/* text-align: center; */
 }
 
+a {
+	text-decoration: none;
+}
+
 .hero-wrap {
 	background: url("images/thinker.png") no-repeat center center;
 	background-size: cover;
@@ -126,6 +131,11 @@ p {
 .hero-wrap h2 {
 	width: 50%;
 	padding: 20px 0;
+}
+
+.hero-wrap h3 {
+	font-size: 2.6rem;
+	letter-spacing: 4px;
 }
 
 .hero-wrap img {
@@ -141,22 +151,42 @@ p {
 	padding-right: 15px;
 }
 
+.feature-wrap {
+	/* display: grid;
+	grid-template-columns: 1fr 1fr; */
+}
+
 .feature {
 	display: flex;
 	justify-content: center;
 	align-items: center;
 	text-align: center;
-	padding: 80px 80px;
+	padding: 120px 80px;
 	flex-wrap: wrap;
 }
 
+.feature > * {
+	/* max-width: 300px; */
+}
+
 .feature-b {
+	flex-direction: row-reverse;
 	background-color: var(--color-secondary);
 }
 
 .feature-text {
-	width: 40%;
-	padding: 0 70px;
+	width: 50%;
+	padding: 0 30px 0 0;
+}
+
+.feature img {
+	display: block;
+	max-width: 100%;
+	margin: 0 auto;
+}
+
+img.factors {
+	max-width: 240px;
 }
 
 footer {
@@ -176,5 +206,75 @@ footer h1 {
 
 .foot {
 	background-color: var(--color-dark);
-	height: 30px;
+	height: 35px;
+	padding: 2rem 0 0 0rem;
+	color: var(--color-primary);
+	text-align: center;
+}
+
+/* tablet */
+
+@media (min-width: 768px) and (max-width: 1024px) {
+
+	.feature {
+		padding: 90px 30px;
+	}
+
+	.feature-text {
+		width: 300px;
+		padding: 70px 20px;
+	}
+
+}
+
+/* phone */
+
+@media (max-width: 768px) {
+
+	h1.wordmark {
+		font-size: 4.6rem;
+	}
+
+	h2.wordmark {
+		font-size: 3rem;
+		width: 100%;
+	}
+
+	.btn h3{
+		font-size: 2rem;
+		padding-bottom: 20px;
+	}
+
+	.hero-wrap h2 {
+		font-size: 3rem;
+	}
+
+	.hero-wrap .cta {
+		width: 120px;
+	}
+
+	.logo {
+		width: 130px;
+	}
+
+	.hero-wrap {
+		padding: 20px 20px;
+	}
+
+	.feature {
+		padding: 70px 20px 70px 20px;
+	}
+
+	.feature-text {
+		width: 300px;
+		padding: 0 0 50px 0;
+	}
+
+	.feature img {
+		width: 220px;
+	}
+
+	img.factors {
+		max-width: 180px;
+	}
 }
